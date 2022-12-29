@@ -234,9 +234,57 @@ class ActiveRecord
     public function borrarImagen()
     {
         //Comprobar si existe el archivo
-        // $existeArchivo = file_exists(CARPETA_IMAGENES . $this->imagen);
-        // if ($existeArchivo) {
-        //     unlink(CARPETA_IMAGENES . $this->imagen);
-        // }
+          if (isset($this->imagen)) {
+            $existeArchivo = file_exists(CARPETA_IMAGENES . $this->imagen . ".webp");
+            if ($existeArchivo) {
+                unlink(CARPETA_IMAGENES . $this->imagen . ".webp");
+            }
+        }
+    }
+    
+       //Contar la cantidad de registros
+    public static function total($columna = '', $valor = '')
+    {
+        $query = "SELECT COUNT(*) FROM " . static::$tabla;
+
+        if ($columna) {
+            $query .= " WHERE ${columna} = ${valor}";
+        }
+
+        $resultado = self::$db->query($query);
+        $total = $resultado->fetch_array();
+
+        return array_shift($total);
+    }
+    
+     //Paginar los registros
+    public static function paginar($por_pagina, $offset)
+    {
+        $query = "SELECT * FROM " . static::$tabla . " ORDER BY id DESC LIMIT ${por_pagina} OFFSET ${offset}";
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
+    
+    //Retornar los registros po un orden
+    public static function ordenar($columna, $orden)
+    {
+        $query = "SELECT * FROM " . static::$tabla . " ORDER BY ${columna} ${orden}";
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
+    
+     //Busqueda where con multiples opciones
+    public static function whereArray($array = [])
+    {
+        $query = "SELECT * FROM " . static::$tabla . " WHERE ";
+        foreach ($array as $key => $value) {
+            if ($key == array_key_last($array)) {
+                $query .= " ${key} = '${value}'";
+            } else {
+                $query .= " ${key} = '${value}' AND";
+            }
+        }
+        $resultado = self::consultarSQL($query);
+        return $resultado;
     }
 }
