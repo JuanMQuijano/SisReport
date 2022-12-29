@@ -5,8 +5,8 @@ IMPORTANTE  -- Reemplazar el script inferior en el package.json y crear las carp
 
 {
     "scripts": {
-      "dev": "gulp"
-    },
+    "dev": "gulp dev"
+  },
     "dependencies": {
       "css-loader": "^6.7.3",
     "cssnano": "^5.1.10",
