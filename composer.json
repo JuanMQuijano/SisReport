@@ -1,0 +1,20 @@
+{
+  "name": "juanq/sisreport",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Juan Quijano - Johan Alvarez"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "MVC\\": "./",
+      "Controllers\\": "./controllers",
+      "Model\\": "./models"
+    }
+  },
+  "require": {
+    "phpmailer/phpmailer": "^6.6",
+    "vlucas/phpdotenv": "^5.5"
+  }
+}
