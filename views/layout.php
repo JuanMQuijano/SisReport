@@ -5,16 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SisReport</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- css  -->
     <link rel="stylesheet" href="/build/css/app.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
 
-    <?php echo $contenido; ?>
-    <?php echo $script ?? ''; ?>
+    <div class="bg">
+        <div class="container">
+
+            <?php require_once __DIR__ . "/aside.php" ?>
+
+            <?php echo $contenido; ?>
+            <?php echo $script ?? ''; ?>
+        </div>
+    </div>
 
     <script src="/build/js/main.min.js"></script>
 </body>

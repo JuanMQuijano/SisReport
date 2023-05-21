@@ -1,2 +1,4 @@
-@use "base";
-@use "componentes";
+@import "partials/variables";
+@import "partials/base";
+@import "partials/sidebar";
+@import "partials/reporte";

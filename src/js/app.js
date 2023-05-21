@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  llenarSalon(); llenarComputador();
+  llenarSalon();
+  llenarComputador();
 });
 
-const salon = document.querySelector("#salon");
-const numeroComputador = document.querySelector("#numero_computador");
+const salon = document.getElementById("salon");
+const numeroComputador = document.getElementById("numero_computador");
 
 function llenarSalon() {
   for (let i = 1; i <= 5; i++) {
