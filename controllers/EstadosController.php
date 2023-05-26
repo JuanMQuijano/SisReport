@@ -5,24 +5,20 @@ namespace Controllers;
 use Model\Reporte;
 use MVC\Router;
 
-class ReporteController
+class EstadosController
 {
 
     public static function index(Router $router)
     {
-        $router->render(
-            'reporte'
-        );
+        $router->render('estados');
     }
 
     public static function store()
     {
         if ($_SERVER['REQUEST_METHOD'] === "POST") {
-            $reporte = new Reporte($_POST);
-         
-            if ($reporte->guardar()) {
-                echo json_encode(true);
-            }
+            $estadoReporte = Reporte::where('cc_est', $_POST['cc_est']);
+
+            echo json_encode($estadoReporte->estado);
         }
     }
 }

@@ -1,6 +1,6 @@
 <main class="contenedor">
     <section class="container-form">
-        <form class="formulario" method="post">
+        <form class="formulario" method="post" id="formulario-reporte">
             <h1>Realiza tu Reporte!</h1>
 
             <div class="formulario__identificacion">
