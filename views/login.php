@@ -1,6 +1,6 @@
 <main class="contenedor">
-    <section class="container-form">
-        <form class="formulario" method="post" id="formulario-login">
+    <section class="container__login">
+        <form class="formulario__login" method="post" id="formulario-login">
             <h1>Inicia Sesión!</h1>
 
             <div class="formulario__identificacion">

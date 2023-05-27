@@ -18,11 +18,11 @@
 
 <body>
 
-    <div class="bg">
-        <div class="container">
+    <div class="container">
 
-            <?php require_once __DIR__ . "/aside.php" ?>
+        <?php require_once __DIR__ . "/aside.php" ?>
 
+        <div class="container-con">
             <?php echo $contenido; ?>
             <?php echo $script ?? ''; ?>
         </div>

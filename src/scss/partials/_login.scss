@@ -1,0 +1,32 @@
+.container__login {
+  width: 80%;
+}
+
+.formulario__login {
+  color: $text-color-grey-form;
+  font-size: $fontsize;
+  background: $bg-tersary;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  & h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $text-color-white;
+  }
+}
+
+.formulario__password {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  & > input {
+    padding: 1rem 0.1rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $bg-cuaternary;
+  }
+}

@@ -46,8 +46,7 @@
 
     <?php } else { ?>
       <a href="/login">
-        <i class='bx bx-exit'></i>
-        Iniciar Sesión
+        <i class='bx bx-user-circle''></i>
       </a>
     <?php } ?>
   </div>
