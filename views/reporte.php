@@ -8,26 +8,28 @@
                 <input autofocus type="text" name="cc_est" id="cc_est" placeholder="Ingresa tu número de identificación" autoComplete='off'>
             </div>
 
-            <div class="formulario__sede">
-                <label for="sede">Sede</label>
-                <select name="sede" id="sede">
-                    <option value="1">Bicentenario</option>
-                    <option value="2">Encarnación</option>
-                    <option value="3">Casa Obando</option>
-                    <option value="4">Mi Vaquita</option>
-                </select>
-            </div>
-
-            <div class="formulario__salon">
-                <label for="salon">Salón</label>
-                <select name="salon" id="salon">
-                </select>
-            </div>
-
-            <div class="formulario__computador">
-                <label for="numero_computador">Número Computador</label>
-                <select name="numero_computador" id="numero_computador">
-                </select>
+            <div class="formulario__selecionar">
+                <div class="formulario__sede">
+                    <label for="sede">Sede</label>
+                    <select name="sede" id="sede">
+                        <option value="1">Bicentenario</option>
+                        <option value="2">Encarnación</option>
+                        <option value="3">Casa Obando</option>
+                        <option value="4">Mi Vaquita</option>
+                    </select>
+                </div>
+                
+                <div class="formulario__salon">
+                    <label for="salon">Salón</label>
+                    <select name="salon" id="salon">
+                    </select>
+                </div>
+                
+                <div class="formulario__computador">
+                    <label for="numero_computador">Número Computador</label>
+                    <select name="numero_computador" id="numero_computador">
+                    </select>
+                </div>
             </div>
 
             <div class="formulario__descripcion">
