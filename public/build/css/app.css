@@ -58,7 +58,7 @@ body {
 
 .container {
   background: #292c34;
-  max-width: 1024px;
+  max-width: 1280px;
   height: calc(100vh - 2rem);
   border-radius: 1rem;
   box-shadow: 0 0 0.1rem 0.1rem #292c34;
@@ -115,6 +115,15 @@ select:hover {
   outline: none;
   border: none;
   background-color: #383d49;
+}
+
+.botones {
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .botones__span {
+    display: none;
+  }
 }
 
 .sidebar {
@@ -198,6 +207,7 @@ select:hover {
     align-items: center;
     gap: 0.5rem;
     height: 100%;
+    font-size: 0.7rem;
   }
   .sidebar__menu-li > a {
     display: flex;
@@ -362,6 +372,11 @@ select:hover {
 table {
   border-collapse: collapse;
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  table {
+    font-size: 0.7rem;
+  }
 }
 
 th,

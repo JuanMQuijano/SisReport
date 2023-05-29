@@ -38,15 +38,20 @@
   <div class="sidebar__exit">
     <?php if (isset($_SESSION['login'])) { ?>
       <form action="/logout" method="POST">
-        <button type="submit">
+        <button type="submit" class="botones">
           <i class='bx bx-exit'></i>
-          Cerrar Sesión
+          <span class="botones__span">
+            Cerrar Sesión
+          </span>
         </button>
       </form>
 
     <?php } else { ?>
-      <a href="/login">
+      <a href="/login" class="botones">
         <i class='bx bx-user-circle''></i>
+        <span class="botones__span">
+          Inicar Sesión
+        </span>
       </a>
     <?php } ?>
   </div>
