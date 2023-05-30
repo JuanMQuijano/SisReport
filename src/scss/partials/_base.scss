@@ -80,6 +80,7 @@ select:hover {
 
 .botones {
   text-align: center;
+  cursor: pointer;
 
   &__span {
     @media screen and (max-width: 768px) {
