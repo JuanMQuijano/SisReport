@@ -38,6 +38,7 @@ body {
   display: grid;
   place-items: center;
   padding: 2rem;
+  overflow-y: auto;
 
   @media screen and (max-width: 768px) {
     padding: 0 0 2rem 0;

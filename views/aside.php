@@ -20,9 +20,9 @@
       </li>
     <?php } else { ?>
 
-      <li class="sidebar__menu-li">
+      <li class="sidebar__menu-li admin">
         <p>
-          Bienvenido <?php echo $_SESSION['nombre'] ?>
+          Bienvenido <br/> <?php echo $_SESSION['nombre'] ?>
         </p>
       </li>
 

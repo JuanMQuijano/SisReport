@@ -77,6 +77,7 @@ body {
   display: grid;
   place-items: center;
   padding: 2rem;
+  overflow-y: auto;
 }
 @media screen and (max-width: 768px) {
   .container-con {
@@ -181,6 +182,25 @@ select:hover {
 .sidebar__exit > a > i {
   font-size: 1.5rem;
 }
+.sidebar__exit form button {
+  width: max-content;
+  padding: 0 1rem;
+  color: #a8a7aa;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 300ms ease;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+}
+.sidebar__exit form button:hover {
+  color: #eeecf0;
+}
+.sidebar__exit form button > i {
+  font-size: 1.5rem;
+}
 @media screen and (max-width: 768px) {
   .sidebar {
     position: absolute;
@@ -232,6 +252,16 @@ select:hover {
   }
   .sidebar__exit > a > i {
     font-size: 2rem;
+  }
+}
+
+.admin {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .admin {
+    display: none;
   }
 }
 
@@ -419,5 +449,47 @@ th {
   outline: none;
   border: none;
   border-bottom: 1px solid #383d49;
+}
+
+.dashboard {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 0 auto;
+}
+.dashboard__contenido {
+  background: #22252d;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+}
+.dashboard__contenido h1 {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.btnTerminar {
+  background: #30353e;
+  color: #eeecf0;
+  font-size: 1rem;
+  padding: 0.3em;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 0.9rem !important;
+  }
+  table {
+    font-size: 0.6rem;
+  }
+  .btnTerminar {
+    font-size: 0.5rem;
+    border-radius: 0.2rem;
+  }
 }
 /*# sourceMappingURL=app.css.map */
