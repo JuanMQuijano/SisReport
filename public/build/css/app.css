@@ -1,3 +1,16 @@
+/* $bg-primary: #22252d;
+$bg-secondary: #292c34;
+$bg-tersary: #30353e;
+$bg-cuaternary: #383d49;
+$bg-quintary: #3c414d;
+$color-purple: #9750c5;
+$text-color-white: #eeecf0;
+$text-color-grey: #a8a7aa;
+$text-color-grey-form: #a8a7aa;
+$shadow: 0 0 0.1rem 0.1rem $bg-secondary;
+$color-btn: #22252d;
+$fontsize: 1rem;
+ */
 /* 
 $bg-primary: #22252d;
 $bg-secondary: #292c34;
@@ -50,18 +63,18 @@ html {
 }
 
 body {
-  color: #eeecf0;
-  background: #22252d;
+  color: #000000;
+  background: #eaedf7;
   padding: 1rem;
   overflow: hidden;
 }
 
 .container {
-  background: #292c34;
+  background: #031bf5;
   max-width: 1280px;
   height: calc(100vh - 2rem);
   border-radius: 1rem;
-  box-shadow: 0 0 0.1rem 0.1rem #292c34;
+  box-shadow: 0 0 0.1rem 0.1rem #031bf5;
   display: flex;
   margin: 0 auto;
   position: relative;
@@ -77,6 +90,7 @@ body {
   display: grid;
   place-items: center;
   padding: 2rem;
+  overflow-y: auto;
 }
 @media screen and (max-width: 768px) {
   .container-con {
@@ -89,22 +103,22 @@ li {
 }
 
 a {
-  color: #eeecf0;
+  color: #000000;
   text-decoration: none;
 }
 
 ::placeholder {
-  color: #a8a7aa;
+  color: #000000;
 }
 
 input,
 textarea {
-  color: #eeecf0;
+  color: #000000;
 }
 
 select {
-  background: #22252d;
-  color: #eeecf0;
+  background: #eaedf7;
+  color: #000000;
   outline: none;
   border: none;
   border-radius: 0.5rem;
@@ -114,11 +128,12 @@ select {
 select:hover {
   outline: none;
   border: none;
-  background-color: #383d49;
+  background-color: #ffffff;
 }
 
 .botones {
   text-align: center;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .botones__span {
@@ -131,7 +146,7 @@ select:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-right: 1px solid #383d49;
+  border-right: 1px solid #ffffff;
   padding: 1rem;
 }
 .sidebar__logo {
@@ -155,12 +170,12 @@ select:hover {
   gap: 0.4rem;
   padding: 1rem;
   border-radius: 1rem;
-  color: #a8a7aa;
+  color: #eaedf7;
   transition: all 300ms ease;
 }
 .sidebar__menu-li > a:hover {
-  background-color: #30353e;
-  color: #eeecf0;
+  background-color: #eaedf7;
+  color: #000000;
 }
 .sidebar__menu-li > a > i {
   font-size: 1.5rem;
@@ -168,7 +183,7 @@ select:hover {
 .sidebar__exit > a {
   width: max-content;
   padding: 0 1rem;
-  color: #a8a7aa;
+  color: #eaedf7;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -176,9 +191,28 @@ select:hover {
   transition: all 300ms ease;
 }
 .sidebar__exit > a:hover {
-  color: #eeecf0;
+  color: #000000;
 }
 .sidebar__exit > a > i {
+  font-size: 1.5rem;
+}
+.sidebar__exit form button {
+  width: max-content;
+  padding: 0 1rem;
+  color: #eaedf7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 300ms ease;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+}
+.sidebar__exit form button:hover {
+  color: #000000;
+}
+.sidebar__exit form button > i {
   font-size: 1.5rem;
 }
 @media screen and (max-width: 768px) {
@@ -187,7 +221,7 @@ select:hover {
     height: 5rem;
     flex-direction: row;
     align-items: center;
-    background: #383d49;
+    background: #ffffff;
     width: calc(100% - 2rem);
     bottom: 1rem;
     left: 1rem;
@@ -216,8 +250,8 @@ select:hover {
     gap: 0.2rem;
     padding: 0.5rem;
     border-radius: 1rem;
-    background-color: #30353e;
-    color: #eeecf0;
+    background-color: #eaedf7;
+    color: #000000;
   }
   .sidebar__menu-li > a:hover {
     background-color: none;
@@ -228,10 +262,21 @@ select:hover {
   }
   .sidebar__exit > a {
     padding: 0;
-    color: #eeecf0;
+    color: #000000;
   }
   .sidebar__exit > a > i {
     font-size: 2rem;
+  }
+}
+
+.admin {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #eaedf7;
+}
+@media screen and (max-width: 768px) {
+  .admin {
+    display: none;
   }
 }
 
@@ -243,10 +288,10 @@ select:hover {
 }
 
 .container-form {
-  background: #30353e;
+  background: #eaedf7;
   padding: 1rem;
   border-radius: 1rem;
-  box-shadow: 0 0 0.1rem 0.1rem #292c34;
+  box-shadow: 0 0 0.1rem 0.1rem #031bf5;
   width: 80%;
   height: 80%;
 }
@@ -264,13 +309,13 @@ select:hover {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  color: #a8a7aa;
+  color: #000000;
 }
 .formulario > h1 {
   text-align: center;
   font-size: 1.6rem;
   font-weight: 500;
-  color: #eeecf0;
+  color: #000000;
 }
 .formulario__identificacion {
   display: flex;
@@ -281,7 +326,7 @@ select:hover {
   background: transparent;
   outline: none;
   border: none;
-  border-bottom: 1px solid #383d49;
+  border-bottom: 1px solid #ffffff;
 }
 .formulario__selecionar {
   display: flex;
@@ -307,7 +352,7 @@ select:hover {
   background: transparent;
   outline: none;
   border: none;
-  border: 1px solid #383d49;
+  border: 1px solid #ffffff;
   resize: none;
 }
 .formulario__btn {
@@ -315,13 +360,13 @@ select:hover {
   place-items: center;
 }
 .formulario__btn > .btn {
-  background: #22252d;
+  background: #3a4dfa;
   padding: 0.7rem;
   border-radius: 1rem;
   border: none;
   outline: none;
   cursor: pointer;
-  color: #a8a7aa;
+  color: #000000;
 }
 
 .formulario__container {
@@ -333,17 +378,17 @@ select:hover {
 
 .formulario__consultar {
   font-size: 1rem;
-  color: #a8a7aa;
+  color: #000000;
   width: 100%;
   padding: 1rem;
-  background: #30353e;
+  background: #eaedf7;
   border-radius: 0.5rem;
 }
 .formulario__consultar h1 {
   text-align: center;
   font-size: 1.6rem;
   font-weight: 500;
-  color: #eeecf0;
+  color: #000000;
 }
 
 .formulario__identificacion,
@@ -352,7 +397,7 @@ select:hover {
 }
 
 .resultado {
-  background: #30353e;
+  background: #eaedf7;
   text-align: left;
   width: 100%;
   padding: 1rem;
@@ -381,13 +426,13 @@ table {
 
 th,
 td {
-  border: 1px solid #3c414d;
+  border: 1px solid #000000;
   padding: 8px;
   text-align: left;
 }
 
 th {
-  background-color: #292c34;
+  background-color: #031bf5;
 }
 
 .container__login {
@@ -395,9 +440,9 @@ th {
 }
 
 .formulario__login {
-  color: #a8a7aa;
+  color: #000000;
   font-size: 1rem;
-  background: #30353e;
+  background: #eaedf7;
   padding: 1rem;
   border-radius: 0.5rem;
 }
@@ -405,7 +450,7 @@ th {
   text-align: center;
   font-size: 1.6rem;
   font-weight: 500;
-  color: #eeecf0;
+  color: #000000;
 }
 
 .formulario__password {
@@ -418,6 +463,48 @@ th {
   background: transparent;
   outline: none;
   border: none;
-  border-bottom: 1px solid #383d49;
+  border-bottom: 1px solid #ffffff;
+}
+
+.dashboard {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 0 auto;
+}
+.dashboard__contenido {
+  background: #eaedf7;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+}
+.dashboard__contenido h1 {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.btnTerminar {
+  background: #eaedf7;
+  color: #000000;
+  font-size: 1rem;
+  padding: 0.3em;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 0.9rem !important;
+  }
+  table {
+    font-size: 0.6rem;
+  }
+  .btnTerminar {
+    font-size: 0.5rem;
+    border-radius: 0.2rem;
+  }
 }
 /*# sourceMappingURL=app.css.map */
